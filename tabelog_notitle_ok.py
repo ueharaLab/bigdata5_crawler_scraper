@@ -23,6 +23,7 @@ for titlebody in titlebody_path:
     
     title_path = titlebody.xpath(".//p[@class='rvw-item__title rvw-item__title--rvwlst']")
     body_path = titlebody.xpath(".//div[@class='rvw-item__rvw-comment rvw-item__rvw-comment--custom']")
+    
     title =''
     body = ''
     if len(title_path) !=0 :
@@ -31,6 +32,7 @@ for titlebody in titlebody_path:
     if len(body_path) !=0:
         body = body_path[0].text_content().replace(' ','').replace('\n','')      
         print(body)
+    
     print('\n')
     tabelog_info.append([title,body])
 
